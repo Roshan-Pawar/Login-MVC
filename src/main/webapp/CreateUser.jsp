@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Validate</title>
+<title>Create User</title>
 </head>
 <body>
 
@@ -15,26 +15,21 @@
 	<jsp:setProperty property="*" name="bean" />
 
 	<!-- Create dao Bean -->
-	<jsp:useBean id="dao" class="model.LoginDao" /> 
+	<jsp:useBean id="dao" class="model.LoginDao" />
 
 	<%
-	boolean r = dao.validate(bean);
+	boolean r = dao.createUser(bean);
 	if (r) {
-		session.setAttribute("u", request.getParameter("userName"));
+		out.print("Username and Password created Sucessfully...");
 	%>
-
-	<jsp:forward page="Welcome.jsp" />
-
+	<jsp:include page="Index.jsp" />
 	<%
 	} else {
-		out.print("Invalid Credentials");
+		out.print("User already exists...");
 	%>
+	<jsp:include page="SignUp.jsp" />
+	<% } %>
 
-	<jsp:include page="Index.jsp" />
-
-	<%
-	}
-	%>
 
 </body>
 </html>

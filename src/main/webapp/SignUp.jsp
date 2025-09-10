@@ -4,17 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Login Page</title>
+<title>Sign Up</title>
 </head>
 <body>
 
-	<form action="Validate.jsp" method="post">
+	<form action="CreateUser.jsp" method="post">
 		UserName : <input type="text" name="userName"> <br>
 		Password : <input type="password" name="password"> <br>
-		<input type="submit" value="Login">
-	</form>
-	<a href="SignUp.jsp">New User ? Sign Up</a>
+		<input type="submit" value="Sign Up">
 	
+	</form>
 
 </body>
 </html>

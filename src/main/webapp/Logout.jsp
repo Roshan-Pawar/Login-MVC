@@ -4,12 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>welcome</title>
+<title>Logout</title>
 </head>
 <body>
-
-	<h1> Welcome ${sessionScope.u}</h1>
-	<a href="Logout.jsp">Logout</a>
+	
+	<%session.invalidate(); 
+		out.print("Logged Out Sucessfully...");
+	%>
+	
+	<jsp:include page="Index.jsp" />
 
 </body>
 </html>

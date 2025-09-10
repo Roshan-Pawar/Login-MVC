@@ -35,15 +35,20 @@ public class LoginDao {
 
 	}
 	
-	public boolean createUser(Login bean) throws SQLException {
+	public boolean createUser(Login bean) {
 		q = "INSERT INTO login VALUES(?, ?)";
+		int r = 0;
 		
-		ps = con.prepareStatement(q);
-		
-		ps.setString(1, bean.getUserName());
-		ps.setString(2, bean.getPassword());
-		
-		int  r = ps.executeUpdate();
+		try {
+			ps = con.prepareStatement(q);
+			ps.setString(1, bean.getUserName());
+			ps.setString(2, bean.getPassword());
+			
+			r = ps.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			return false;
+		}
 		
 		if(r >0)
 			return true;
