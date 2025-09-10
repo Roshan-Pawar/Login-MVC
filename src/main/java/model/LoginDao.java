@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class LoginDao {
 
-	String url = "jdbc:mysql:localhost:3306/roshan_jdbc", user = "root", pass = "root", q;
+	String url = "jdbc:mysql://localhost:3306/roshan_jdbc", user = "root", pass = "root", q;
 	Connection con = null;
 	PreparedStatement ps = null;
 	ResultSet rs;
