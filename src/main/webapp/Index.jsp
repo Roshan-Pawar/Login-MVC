@@ -12,11 +12,8 @@
 	<div class="login-container">
         <h2>Login</h2>
         <form action="Validate.jsp" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="userName" required> <br>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required> <br>
+            <input type="text" name="userName" placeholder="Username" required> <br>
+            <input type="password" name="password" placeholder="Password" required> <br>
 
             <input type="submit" value="Login" class="btn">
         </form>
