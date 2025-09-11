@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Validate</title>
+<link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body>
 
@@ -27,9 +28,8 @@
 
 	<%
 	} else {
-		out.print("Invalid Credentials");
 	%>
-
+	<div class="message error">Invalid Credentials</div>
 	<jsp:include page="Index.jsp" />
 
 	<%

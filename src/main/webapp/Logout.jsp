@@ -5,13 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Logout</title>
+<link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body>
 	
 	<%session.invalidate(); 
-		out.print("Logged Out Sucessfully...");
 	%>
-	
+	<div class="message error">Logged Out Successfully...</div>
 	<jsp:include page="Index.jsp" />
 
 </body>

@@ -5,11 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>welcome</title>
+<link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body>
 
-	<h1> Welcome ${sessionScope.u}</h1>
-	<a href="Logout.jsp">Logout</a>
+    <div class="welcome-container">
+        <h1 class="welcome-message">Welcome, ${sessionScope.u} 👋</h1>
+        <a href="Logout.jsp" class="logout-btn">Logout</a>
+    </div>
 
 </body>
+
 </html>

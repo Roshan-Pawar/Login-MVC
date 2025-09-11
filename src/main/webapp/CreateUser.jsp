@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Create User</title>
+<link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body>
 
@@ -20,13 +21,13 @@
 	<%
 	boolean r = dao.createUser(bean);
 	if (r) {
-		out.print("Username and Password created Sucessfully...");
 	%>
+	<div class="message success">✅ Username and Password created successfully...</div>
 	<jsp:include page="Index.jsp" />
 	<%
 	} else {
-		out.print("User already exists...");
 	%>
+	<div class="message error">⚠️ User already exists...</div>
 	<jsp:include page="SignUp.jsp" />
 	<% } %>
 
